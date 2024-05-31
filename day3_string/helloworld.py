@@ -31,6 +31,23 @@
 
 # str.zfill(len) # 正负号的时候 将符号位放在最前方
 
-print('s'.zfill(10))
-print('+s'.zfill(10)) # +00000000s
-print('-s'.zfill(10)) # -00000000s
+# print('s'.zfill(10))
+# print('+s'.zfill(10)) # +00000000s
+# print('-s'.zfill(10)) # -00000000s
+
+# str.strip()
+
+# str.lstrip()
+
+# str.rstrip()
+
+# str.replace(tStr,mStr, count) # 用mStr替换tStr，替换count个
+
+# split()
+
+# join()
+
+# encode(btypes)
+
+# decode(btypes)
+
