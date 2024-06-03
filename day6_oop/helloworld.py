@@ -41,4 +41,28 @@
 #     clk.show()
 
 
+from typing import List
+import pandas as pd
 
+# def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+#     return  pd.DataFrame(student_data, columns=['student_id, age'])
+
+# def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+#     arr = []
+#     for stu in student_data:
+#         arr += stu
+
+#     return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
+
+# def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+#     arr = sum(student_data, [])
+
+#     return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
+
+def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+    arr = [i for arr in student_data for i in arr]
+
+    return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
+
+
+    
