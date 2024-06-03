@@ -41,6 +41,7 @@
 #     clk.show()
 
 
+import operator
 from typing import List
 import pandas as pd
 
@@ -59,10 +60,13 @@ import pandas as pd
 
 #     return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
 
-def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
-    arr = [i for arr in student_data for i in arr]
+# def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+#     arr = [i for arr in student_data for i in arr]
 
-    return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
+#     return  pd.DataFrame(data={"student_id":arr[0::2], "age": arr[1::2]})
 
+import functools 
 
-    
+student_data =[[1,15],[2,11],[3,11],[4,20]]
+
+print(functools.reduce(operator.add,student_data))
