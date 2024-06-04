@@ -10,7 +10,6 @@ class Solution(object):
         count = 0
         sign=False
         result = Counter([i for i in s])
-        print(result.values())
         for i in result.values():
             if(i%2 ==0):
                 count+=i
