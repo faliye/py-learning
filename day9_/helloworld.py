@@ -1,4 +1,4 @@
-words = ["bella","label","roller"]
+words = ["bllae","label","roller"]
 
 """
 
@@ -35,3 +35,18 @@ Beats 5.69%
 
 # print(Solution().commonChars(words))
 # print(Solution().commonChars(["cool","lock","cook"]))
+
+
+class Solution:
+    def commonChars(self, words):
+        
+        arr0 = {i for i in words[0]}
+        result = []
+        for c in arr0:
+            mix_count = min( word.count(c) for word in words)
+            for _ in range(mix_count):
+                result.append(c)
+                
+        return result
+    
+print(Solution().commonChars(words))
